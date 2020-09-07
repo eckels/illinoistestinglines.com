@@ -96,7 +96,7 @@ nav .left {
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 424px) {
   .left h1 {
     display: none;
   }
