@@ -96,13 +96,7 @@ nav .left {
   }
 }
 
-@media (max-width: 424px) {
-  .left h1 {
-    display: none;
-  }
-  .search {
-    margin-left: 14px;
-  }
+@media (max-width: 390px) {
   .search-box input {
     width: calc(100vw - 110px);
   }
