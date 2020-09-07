@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/lion-admin.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#00C6FB">
+    <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#00C6FB">
+    <title>Lion Admin Dashboard</title>
+  </head>
+
+  <body>
+    <div id="cover">
+    <img src="img/small-logo.png" alt="Cover Me Logo" class="logo" />
+    <h1>Lion Admin Dashboard</h1>
+    <img src="img/refresh.png" alt="Refresh" id="refresh" onclick="fetchAdmin()" />
+
+    <div class="card-div">
+
+      <div class="card">
+        <h3>The Red Lion</h3>
+        <p>Last updated: <span id="lion-time"></span></p>
+        <p>Cover: <span id="lion-cover"></span></p>
+        <p>Line: <span id="lion-line"></span></p>
+        <br>
+        <div class="buttons">
+          <button onclick="submitButtonDatas('http://covermeonline.com/lion_override.php?a=a&b=a', 'http://covermeonline.com/submitcover.php?a=a&b=a')">None</button>
+          <button onclick="submitButtonDatas('http://covermeonline.com/lion_override.php?a=a&b=b', 'http://covermeonline.com/submitcover.php?a=a&b=b')">$5</button>
+          <button onclick="submitButtonDatas('http://covermeonline.com/lion_override.php?a=a&b=c', 'http://covermeonline.com/submitcover.php?a=a&b=c')">$10</button>
+          <button onclick="submitButtonDatas('http://covermeonline.com/lion_override.php?a=a&b=d', 'http://covermeonline.com/submitcover.php?a=a&b=d')">$20</button>
+        </div>
+        <div class="buttons">
+          <button onclick="submitButtonDatas('http://covermeonline.com/lion_override.php?a=a&c=a', 'http://covermeonline.com/submitline.php?a=a&b=a')">None</button>
+          <button onclick="submitButtonDatas('http://covermeonline.com/lion_override.php?a=a&c=b', 'http://covermeonline.com/submitline.php?a=a&b=b')">5min</button>
+          <button onclick="submitButtonDatas('http://covermeonline.com/lion_override.php?a=a&c=c', 'http://covermeonline.com/submitline.php?a=a&b=c')">10min</button>
+          <button onclick="submitButtonDatas('http://covermeonline.com/lion_override.php?a=a&c=d', 'http://covermeonline.com/submitline.php?a=a&b=d')">30min</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>The Red Lion</h3>
+        <p>Current Deals:</p>
+        <div class="data" id="lion-deals">
+        </div>
+        <p>New Deals:</p>
+        <textarea rows="7" id="lion-input"></textarea>
+        <div class="buttons">
+          <button class="submit" onclick="submitDeals('a')">Submit</button>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+    <script>
+      $(document).ready(function(){
+        //login();
+        fetchAdmin();
+      });
+    </script>
+
+  </body>
+</html>
