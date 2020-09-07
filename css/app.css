@@ -80,6 +80,7 @@ nav .left {
   color: #003367;
   -webkit-appearance: none;
   border-radius: 0;
+  height: 18px;
 }
 
 @media (max-width: 650px) {
