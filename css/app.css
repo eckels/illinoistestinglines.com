@@ -238,7 +238,7 @@ nav .left {
   .card h5 {
     margin: 0;
     color: #003367;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: bold;
     overflow: hidden;
     white-space: nowrap;
@@ -249,7 +249,7 @@ nav .left {
   .card .hours {
     margin: 0;
     color: #003367;
-    font-size: 14px;
+    font-size: 15px;
     margin-bottom: 2px;
   }
   
@@ -260,7 +260,7 @@ nav .left {
   .card .last-updated {
     margin: 0;
     color: #9B9B9B;
-    font-size: 13px;
+    font-size: 14px;
     margin-bottom: 4px;
   }
   
@@ -289,7 +289,7 @@ nav .left {
   .desktop-wait-mobile p {
     margin: 0;
     color: #003367;
-    font-size: 14px;
+    font-size: 15px;
     margin-bottom: 2px;
   }
 
@@ -301,7 +301,7 @@ nav .left {
 
   .card-bottom a {
     color: #DF5E3C;
-    font-size: 14px;
+    font-size: 15px;
     text-decoration: none;
   }
 }
