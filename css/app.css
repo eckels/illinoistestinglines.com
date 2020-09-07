@@ -81,6 +81,7 @@ nav .left {
   -webkit-appearance: none;
   border-radius: 0;
   height: 18px;
+  background-color: transparent;
 }
 
 @media (max-width: 650px) {
