@@ -68,7 +68,7 @@ nav .left {
 }
 
 .search-box img {
-  height: 18px;
+  height: 16px;
   width: auto;
   margin-right: 4px;
 }
@@ -118,7 +118,7 @@ nav .left {
 
 @media (max-width: 450px) {
   .search-box input {
-    width: calc(100vw - 143px);
+    width: calc(100vw - 139px);
   }
 }
 
