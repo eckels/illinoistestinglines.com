@@ -56,13 +56,15 @@ nav .left {
   background-color: #FEFEFE;
   border-radius: 3px;
   padding-right: 8px;
+  padding: 0;
 }
 
 .search-box {
   display: flex;
   align-items: center;
-  margin-top: 5px;
+  margin-top: 4px;
   margin-left: 8px;
+  padding: 0;
 }
 
 .search-box img {
@@ -84,7 +86,20 @@ nav .left {
   background-color: transparent;
 }
 
-@media (max-width: 650px) {
+.info {
+  margin-left: 12px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.info .infologo {
+  height: 26px;
+  width: auto;
+  padding-top: 3px;
+}
+
+@media (max-width: 700px) {
   .left h1 {
     display: none;
   }
@@ -94,11 +109,14 @@ nav .left {
   .search-box input {
     width: 300px;
   }
+  .info {
+    margin-left: 14px;
+  }
 }
 
-@media (max-width: 424px) {
+@media (max-width: 450px) {
   .search-box input {
-    width: calc(100vw - 110px);
+    width: calc(100vw - 143px);
   }
 }
 
