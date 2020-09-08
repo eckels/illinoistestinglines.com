@@ -175,6 +175,12 @@ nav .left {
   font-weight: 400;
   outline: none;
   -webkit-appearance: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.hours-edit button:hover {
+  background-color: #FF2E00;
 }
 
 .card .desktop-wait {
