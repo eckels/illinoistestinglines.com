@@ -270,6 +270,8 @@ nav .left {
   .card .desktop-wait-mobile {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 130px;
   }
   
   .desktop-wait-mobile .circle {
@@ -294,6 +296,9 @@ nav .left {
   }
 
   .card-bottom a {
+    padding: 6px 0;
+    text-align: center;
+    width: 130px;
     color: #DF5E3C;
     font-size: 15px;
     text-decoration: none;
