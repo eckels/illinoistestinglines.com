@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#00C6FB">
+    <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#00C6FB">
+    <title>Cover Me Admin Dashboard</title>
+  </head>
+
+  <body>
+    <div id="cover">
+    <a id="toapp" href="app.html">Go to Web App</a>
+    <img src="img/small-logo.png" alt="Cover Me Logo" class="logo" />
+    <h1>Admin Dashboard</h1>
+    <div class="nav">
+      <button class="nav-1 active">Cover Prices</button><button class="nav-2" onclick="loadDealsPage()">Drink Deals</button>
+    </div>
+    <img src="img/refresh.png" alt="Refresh" id="refresh" onclick="refreshAdmin()" />
+
+    <div class="card-div">
+
+      <div class="card">
+        <h3>The Red Lion</h3>
+        <p>Last updated: <span id="lion-time"></span></p>
+        <p>Cover: <span id="lion-cover"></span></p>
+        <p>Line: <span id="lion-line"></span></p>
+        <div class="data" id="lion-data">
+        </div>
+        <div class="buttons">
+          <button onclick="submitButtonData('http://covermeonline.com/submitcover.php?a=a&b=a')">None</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitcover.php?a=a&b=b')">$5</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitcover.php?a=a&b=c')">$10</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitcover.php?a=a&b=d')">$20</button>
+        </div>
+        <div class="buttons">
+          <button onclick="submitButtonData('http://covermeonline.com/submitline.php?a=a&b=a')">None</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitline.php?a=a&b=b')">5min</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitline.php?a=a&b=c')">10min</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitline.php?a=a&b=d')">30min</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>KAM'S</h3>
+        <p>Last updated: <span id="kams-time"></span></p>
+        <p>Cover: <span id="kams-cover"></span></p>
+        <p>Line: <span id="kams-line"></span></p>
+        <div class="data" id="kams-data">
+        </div>
+        <div class="buttons">
+          <button onclick="submitButtonData('http://covermeonline.com/submitcover.php?a=b&b=a')">None</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitcover.php?a=b&b=b')">$5</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitcover.php?a=b&b=c')">$10</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitcover.php?a=b&b=d')">$20</button>
+        </div>
+        <div class="buttons">
+          <button onclick="submitButtonData('http://covermeonline.com/submitline.php?a=b&b=a')">None</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitline.php?a=b&b=b')">5min</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitline.php?a=b&b=c')">10min</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitline.php?a=b&b=d')">30min</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Joe's Brewery</h3>
+        <p>Last updated: <span id="joes-time"></span></p>
+        <p>Cover: <span id="joes-cover"></span></p>
+        <p>Line: <span id="joes-line"></span></p>
+        <div class="data" id="joes-data">
+        </div>
+        <div class="buttons">
+          <button onclick="submitButtonData('http://covermeonline.com/submitcover.php?a=c&b=a')">None</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitcover.php?a=c&b=b')">$5</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitcover.php?a=c&b=c')">$10</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitcover.php?a=c&b=d')">$20</button>
+        </div>
+        <div class="buttons">
+          <button onclick="submitButtonData('http://covermeonline.com/submitline.php?a=c&b=a')">None</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitline.php?a=c&b=b')">5min</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitline.php?a=c&b=c')">10min</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitline.php?a=c&b=d')">30min</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>The Hub</h3>
+        <p>Last updated: <span id="hub-time"></span></p>
+        <p>Cover: <span id="hub-cover"></span></p>
+        <p>Line: <span id="hub-line"></span></p>
+        <div class="data" id="hub-data">
+        </div>
+        <div class="buttons">
+          <button onclick="submitButtonData('http://covermeonline.com/submitcover.php?a=e&b=a')">None</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitcover.php?a=e&b=b')">$5</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitcover.php?a=e&b=c')">$10</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitcover.php?a=e&b=d')">$20</button>
+        </div>
+        <div class="buttons">
+          <button onclick="submitButtonData('http://covermeonline.com/submitline.php?a=e&b=a')">None</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitline.php?a=e&b=b')">5min</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitline.php?a=e&b=c')">10min</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitline.php?a=e&b=d')">30min</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Brothers</h3>
+        <p>Last updated: <span id="bros-time"></span></p>
+        <p>Cover: <span id="bros-cover"></span></p>
+        <p>Line: <span id="bros-line"></span></p>
+        <div class="data" id="bros-data">
+        </div>
+        <div class="buttons">
+          <button onclick="submitButtonData('http://covermeonline.com/submitcover.php?a=d&b=a')">None</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitcover.php?a=d&b=b')">$5</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitcover.php?a=d&b=c')">$10</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitcover.php?a=d&b=d')">$20</button>
+        </div>
+        <div class="buttons">
+          <button onclick="submitButtonData('http://covermeonline.com/submitline.php?a=d&b=a')">None</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitline.php?a=d&b=b')">5min</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitline.php?a=d&b=c')">10min</button>
+          <button onclick="submitButtonData('http://covermeonline.com/submitline.php?a=d&b=d')">30min</button>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+    <div id="deals">
+    <a id="toapp" href="app.html">Go to Web App</a>
+    <img src="img/small-logo.png" alt="Cover Me Logo" class="logo" />
+    <h1>Admin Dashboard</h1>
+    <div class="nav">
+      <button class="nav-1" onclick="loadCoverPage()">Cover Prices</button><button class="nav-2 active">Drink Deals</button>
+    </div>
+    <img src="img/refresh.png" alt="Refresh" id="refresh" onclick="refreshAdmin()" />
+
+    <div class="card-div">
+
+      <div class="card">
+        <h3>The Red Lion</h3>
+        <p>Current Deals:</p>
+        <div class="data" id="lion-deals">
+        </div>
+        <p>New Deals:</p>
+        <textarea rows="7" id="lion-input"></textarea>
+        <div class="buttons">
+          <button class="submit" onclick="submitDeals('a')">Submit</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>KAM'S</h3>
+        <p>Current Deals:</p>
+        <div class="data" id="kams-deals">
+        </div>
+        <p>New Deals:</p>
+        <textarea rows="7" id="kams-input"></textarea>
+        <div class="buttons">
+          <button class="submit" onclick="submitDeals('b')">Submit</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Joe's Brewery</h3>
+        <p>Current Deals:</p>
+        <div class="data" id="joes-deals">
+        </div>
+        <p>New Deals:</p>
+        <textarea rows="7" id="joes-input"></textarea>
+        <div class="buttons">
+          <button class="submit" onclick="submitDeals('c')">Submit</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>The Hub</h3>
+        <p>Current Deals:</p>
+        <div class="data" id="hub-deals">
+        </div>
+        <p>New Deals:</p>
+        <textarea rows="7" id="hub-input"></textarea>
+        <div class="buttons">
+          <button class="submit" onclick="submitDeals('e')">Submit</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Brothers</h3>
+        <p>Current Deals:</p>
+        <div class="data" id="bros-deals">
+        </div>
+        <p>New Deals:</p>
+        <textarea rows="7" id="bros-input"></textarea>
+        <div class="buttons">
+          <button class="submit" onclick="submitDeals('d')">Submit</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Illini Inn</h3>
+        <p>Current Deals:</p>
+        <div class="data" id="inn-deals">
+        </div>
+        <!--<p>New Deals:</p>
+        <textarea rows="7" id="inn-input"></textarea>
+        <div class="buttons">
+          <button class="submit" href="">Submit</button>
+        </div>-->
+      </div>
+
+      <div class="card">
+        <h3>Legends</h3>
+        <p>Current Deals:</p>
+        <div class="data" id="legends-deals">
+        </div>
+        <!--<p>New Deals:</p>
+        <textarea rows="7" id="legends-input"></textarea>
+        <div class="buttons">
+          <button class="submit" href="">Submit</button>
+        </div>-->
+      </div>
+
+      <div class="card">
+        <h3>Murphy's</h3>
+        <p>Current Deals:</p>
+        <div class="data" id="murphy-deals">
+        </div>
+        <!--<p>New Deals:</p>
+        <textarea rows="7" id="murphy-input"></textarea>
+        <div class="buttons">
+          <button class="submit" href="">Submit</button>
+        </div>-->
+      </div>
+
+      <div class="card">
+        <h3>Canopy Club</h3>
+        <p>Current Deals:</p>
+        <div class="data" id="canopy-deals">
+        </div>
+        <!--<p>New Deals:</p>
+        <textarea rows="7" id="canopy-input"></textarea>
+        <div class="buttons">
+          <button class="submit" href="">Submit</button>
+        </div>-->
+      </div>
+
+    </div>
+    </div>
+    <script>
+      $(document).ready(function(){
+        //login();
+        fetchAdmin();
+      });
+    </script>
+
+  </body>
+</html>
